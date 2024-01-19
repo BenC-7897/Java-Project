@@ -18,5 +18,6 @@ public class BST_App {
 		for (int i=0; i<fullyBalancedTree.length; i++)
 			bal_bst.insert(fullyBalancedTree[i]);
 		bal_bst.draw();
+                System.out.println(bal_bst.max());
   }
 }
