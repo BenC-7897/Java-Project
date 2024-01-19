@@ -1,0 +1,24 @@
+public int removeAll(T item) { 
+		int removal = 0; 
+		if (head == null ) {
+		return removal; 
+		}
+		while (head!=null && head.item.equals(item)) {
+		head = head.next; 
+		removal++; 
+		}
+		Node<T> current = head; 
+		while (current != null && current.next !=null) {
+			if (current.next.item.equals(item)) {
+			current.next = current.next.next; 
+			removal++; 
+			}
+			else current = current.next;
+			}
+			return removal;
+	}
+public static void main(String args[]) {
+System.out.println("Original List: " + List); 
+int removal_variable = List.removeAll("Ten"); 
+System.out.println("New List: " + List); 
+} 
