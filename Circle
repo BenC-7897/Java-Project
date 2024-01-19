@@ -1,0 +1,41 @@
+import edu.princeton.cs.introcs.StdDraw;
+import java.awt.Color;
+
+public class Circle implements GraphicsElement{
+	
+private Point2D centre_point;
+private double radius; 
+
+public Circle(double x, double y, double r) {
+centre_point = new Point2D(x,y); 
+radius = r; 
+}
+
+@Override
+public void draw(Color c) {
+StdDraw.setPenColor(c);
+StdDraw.setPenRadius(0.005);
+StdDraw.circle(centre_point.X(),centre_point.Y(),radius);
+}
+
+@Override
+public void moveBy(double x, double y) {
+centre_point = new Point2D(x, y); 	
+}
+
+@Override
+public void scaleBy(double factor) {
+if (factor > 0) {
+radius = radius * factor; 
+}
+	
+}
+public static void main (String args[]) {
+Circle c = new Circle(0.3,0.3,0.25);
+StdDraw.clear(Color.RED);
+c.draw(new Color(0.5f,0.2f,0.7f));
+c.scaleBy(0.4);
+c.moveBy(0.1, 0.1);
+c.draw(new Color(0.5f, 0.7f, 0.2f));
+}
+}
