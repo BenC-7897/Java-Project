@@ -1,0 +1,17 @@
+public static Point2D[] minXmaxX(Point2D[] points) {
+        if (points == null || points.length == 0) {
+            return null;
+        }
+        Point2D minimum = points[0];
+        Point2D maximum = points[0];
+        for (Point2D Point : points) {
+            if (Point.X() < minimum.X()) {
+               minimum = Point;
+            }
+            if (Point.X() > maximum.X()) {
+               maximum = Point;
+            }
+        }
+        Point2D[] result = {minimum, maximum};
+        return result;
+    }
