@@ -1,0 +1,21 @@
+class Account {
+       String name;
+       int accountNumber;
+       public Account(String nm, int acn) {
+          name = nm; accountNumber = acn;
+       }
+    }
+static class Account implements Comparable<Account> {
+       String name;
+       int accountNumber;
+       public Account(String nm, int acn) {
+          name = nm; 
+          accountNumber = acn;
+       }
+      @Override
+      public int compareTo(Account account) {
+      if (this.accountNumber > account.accountNumber) return 1; 
+      else if (this.accountNumber < account.accountNumber) return -1; 
+      else return 0; 
+      }
+    }
