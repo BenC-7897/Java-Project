@@ -1,13 +1,13 @@
-public ArrayList<T> asReverseOrderedList() {
+public ArrayList<T> asReverseOrderedList() { // Method to reverse the list of values in the BST 
     ArrayList<T> outcome = new ArrayList<>(); 
     asReverseOrderedList(root, outcome); 
     return outcome; 
 }
-private void asReverseOrderedList(Node<T> node, ArrayList<T> outcome) {
+private void asReverseOrderedList(Node<T> node, ArrayList<T> outcome) { // Helper method to traverse the BST in reverse order 
 	if (node!=null) {
-	asReverseOrderedList(node.right, outcome); 
-	asReverseOrderedList(node.left, outcome); 
-        outcome.add(node.item);
+	asReverseOrderedList(node.right, outcome); // Traverse the right subtree first in reverse order 
+	asReverseOrderedList(node.left, outcome); // Traverse the left subtree in reverse order 
+        outcome.add(node.item); // Add the current node to the array list 
     }
 }
 public class BST_App {
