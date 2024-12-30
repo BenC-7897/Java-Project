@@ -11,4 +11,4 @@ static class Account implements Comparable<Account> { // A nested class to imple
       else if (this.accountNumber < account.accountNumber) return -1; // Invalid account number 
       else return 0; // Return nothing 
       }
-    }
+}
